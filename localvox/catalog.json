@@ -1,0 +1,12 @@
+{
+  "id": "parakeet-ultra",
+  "name": "Parakeet Ultra Q8_0",
+  "repository": "handy-computer/parakeet-ultra-gguf",
+  "revision": "39eeb55181f0d354fd934f06e92fd8d5037fed8e",
+  "filename": "parakeet-ultra-Q8_0.gguf",
+  "size": 740363168,
+  "sha256": "007a59761e9258779f189df396b50d12b83bb5b79e66df4b955c230d2f2a0a59",
+  "license": "CC-BY-4.0",
+  "upstream": "https://huggingface.co/moondream/parakeet-ultra",
+  "base": "https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3"
+}

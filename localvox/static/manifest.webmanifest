@@ -1,0 +1,12 @@
+{
+  "id": "/", "name": "LocalVox", "short_name": "LocalVox", "start_url": "/", "scope": "/",
+  "display": "standalone", "background_color": "#f7f7ef", "theme_color": "#183b32",
+  "icons": [
+    {"src":"/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"}
+  ],
+  "share_target": {
+    "action":"/share", "method":"POST", "enctype":"multipart/form-data",
+    "params":{"files":[{"name":"files","accept":["audio/*","application/ogg","application/octet-stream",".wav",".flac",".mp3",".opus",".ogg",".m4a",".aac",".amr",".3gp",".webm",".mp4"]}]}
+  }
+}

@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "localvox"
+version = "0.1.0"
+description = "Self-hosted audio transcription with Parakeet Ultra on CPU"
+requires-python = ">=3.11,<3.14"
+license = "MIT"
+dependencies = [
+  "fastapi==0.162.2", "uvicorn==0.54.0", "python-multipart==0.0.33",
+  "transcribe-cpp==0.4.1", "imageio-ffmpeg==0.8.1",
+]
+[project.optional-dependencies]
+test = ["pytest==9.2.0", "httpx==0.28.1"]
+[project.scripts]
+localvox = "localvox.cli:main"
+[tool.setuptools.package-data]
+localvox = ["static/*", "catalog.json"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["localvox*"]

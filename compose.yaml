@@ -1,0 +1,26 @@
+services:
+  localvox:
+    build: .
+    init: true
+    env_file: .env
+    environment:
+      LOCALVOX_MODEL_DIR: /data/models
+      LOCALVOX_TEMP_DIR: /tmp/localvox
+      LOCALVOX_PORT: "8000"
+    ports:
+      - "${LOCALVOX_PORT:-8000}:8000"
+    volumes:
+      - models:/data/models
+    tmpfs:
+      - /tmp:size=600m,mode=1777
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+    mem_limit: 4g
+    cpus: 2
+    pids_limit: 128
+    restart: unless-stopped
+    stop_grace_period: 35s
+volumes:
+  models:

@@ -1,0 +1,4 @@
+include .env.example Dockerfile compose.yaml requirements.lock requirements-test.lock NOTICE.md
+recursive-include tests *.py
+recursive-include scripts *.py *.mjs
+recursive-include docs *.md

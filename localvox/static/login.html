@@ -1,0 +1,5 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#183b32"><link rel="manifest" href="/manifest.webmanifest"><link rel="icon" href="/icon-192.png"><title>Sign in · LocalVox</title>
+<body><main><h1>LocalVox</h1><p>Private audio transcription on your server.</p>
+<form action="/login" method="post"><label for="token">Administrator token</label><br><input id="token" name="token" type="password" autocomplete="current-password" required minlength="24"><button>Sign in</button></form>
+<p>Your browser sends audio to this server. Speech recognition runs on the server CPU.</p><p>On HTTP, the token and audio travel unencrypted. Use only a trusted LAN, or use HTTPS or a VPN.</p></main></body></html>
